@@ -60,7 +60,7 @@ $server->on('message', function (swoole_websocket_server $_server, $frame) use (
     if ($frame->fd == 2) {
         $_server->push(1, $frame->data);
     }
-
+    echo $frame->fd;
     var_dump($frame->data);
 
     /*if($frame->data == '杨海龙'){
