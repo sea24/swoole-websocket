@@ -41,7 +41,7 @@ function user_handshake(swoole_http_request $request, swoole_http_response $resp
     $fd = $request->fd;
     $server->defer(function () use ($fd, $server) {
         $server->push($fd, "hello, welcome\n");
-        $server->close();
+       
     });
     return true;
 }
